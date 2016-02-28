@@ -1,0 +1,11 @@
+install:
+- gem install asciidoctor
+script:
+- asciidoctor faq.adoc -o html/faq.html
+env:
+  global:
+    - GH_REF: aminesabri/test_integration.git
+    - secure: h7AkXzprzVHY9fhpfUZlgHos3f+xSxLA2TE6Nv+xILDt/zvWVe663hMCXZrwQr8UYMUdvSpMAsrTGJ9WqnLo22fa9zU55T+KeicAmje5q+xk1kkVRocztbokkTx+nJzlPqpma43T7y6NAI5d8YJHMMB2Dx/GRzPSgziob4pcZbrTHrcR2uO13wQMTwmgI1Lu1X42ed0s1ZiiNJfimrsnFnnpYoqDjbyK6kuHQ6QUZv3Y38Gtq3Fhd6m5/Q3Vo1U3OFWDKDXeP2nW+eWIoxNjWPSM+9pifT4Y9KYuTKj4E9e2WSSgxfWuSW3Kq9n5mbqJdLoTASDFZl/tGStrlwiA4MBAZLA6t8NlsGQrwOHhAacgBlhAogFW6VcE80yYuKLefM3cT35mDTQIwbg437jnun2DVQQ3zWL0XL0dV6RmYVhIB6m2071hepibKv0aEFouYDMZGcAydM2SNHZTL8kkK4Wqmetq16FovnO7DBkmWo9grU3Hmrmrr2k/4DKF2J9E3GuB1TsF4c4iv0z+7lSZn4I96TzmvkIJi0mSJr5dgRjtYT1y6r6+xkaymHCyaN/gDHVuDgc6Mstdccc84K2GoEtPAh7nNJTC5p6oNXkwGBmO8+KUwHQy1A0IfVO9Y7+5RAUoVu7U7qMklRmv0Rt7UjnrT3PUErsQPwO1ZlFYEdM=
+
+after_success: 
+- bash monscript.sh

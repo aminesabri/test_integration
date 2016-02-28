@@ -1,0 +1,10 @@
+install:
+- gem install asciidoctor
+script:
+- asciidoctor faq.adoc -o html/faq.html
+env:
+  global:
+    - GH_REF: aminesabri/test_integration.git
+    - secure: 
+after_success: 
+- bash monscript.sh
