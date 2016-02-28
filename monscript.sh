@@ -14,7 +14,7 @@ git config --global user.name "aminesabri"
 git clone --quiet https://${GH_TOKEN}@github.com/aminesabri/aminesabri.github.io.git  doc > /dev/null
 
 
-cd gh-pages
+cd master
 ls
 
 cp $HOME/html/faq.html ./index.html
